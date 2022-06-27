@@ -1,4 +1,4 @@
 @echo off
-TITLE Altron X
-:: Enables virtual env mode and then starts Altron
+TITLE Fallen Robot
+:: Enables virtual env mode and then starts Fallen
 env\scripts\activate.bat && py -m Altron

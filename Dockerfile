@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/Altron
-RUN git clone -b shiken https://github.com/ERR0rMK/Altron /root/Altron
+RUN git clone -b shiken https://github.com/TheAltronX/Altron /root/Altron
 WORKDIR /root/Altron
 
 #Copy config file to /root/Altron/Altron
