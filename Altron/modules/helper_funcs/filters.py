@@ -1,4 +1,4 @@
-from Altron import DEV_USERS, PYTHON, DEMONS
+from Altron import DEV_USERS, DRAGONS, DEMONS
 from telegram import Message
 from telegram.ext import BaseFilter
 
@@ -12,7 +12,7 @@ class CustomFilters(object):
 
     class _Sudoers(BaseFilter):
         def filter(self, message: Message):
-            return bool(message.from_user and message.from_user.id in PYTHON)
+            return bool(message.from_user and message.from_user.id in DRAGONS)
 
     sudo_filter = _Sudoers()
 

@@ -3,7 +3,7 @@ from sqlalchemy import Column, String
 from Altron.modules.sql import BASE, SESSION
 
 #   |----------------------------------|
-#   |  Test Module by @HACKERX131 |
+#   |  Test Module by @EverythingSuckz |
 #   |        Kang with Credits         |
 #   |----------------------------------|
 class NSFWChats(BASE):

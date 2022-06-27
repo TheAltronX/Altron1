@@ -1,7 +1,7 @@
-from Altron import DEV_USERS, PYTHON, DEMONS, TIGERS, WOLVES, telethn
+from Altron import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES, telethn
 
-AltronUsers = PYTHON + WOLVES + DEMONS + TIGERS + DEV_USERS
+IMMUNE_USERS = DRAGONS + WOLVES + DEMONS + TIGERS + DEV_USERS
 
-AltronUsers = (
-    list(PYTHON) + list(WOLVES) + list(DEMONS) + list(TIGERS) + list(DEV_USERS)
+IMMUNE_USERS = (
+    list(DRAGONS) + list(WOLVES) + list(DEMONS) + list(TIGERS) + list(DEV_USERS)
 )

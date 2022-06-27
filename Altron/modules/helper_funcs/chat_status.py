@@ -5,7 +5,7 @@ from threading import RLock
 from Altron import (
     DEL_CMDS,
     DEV_USERS,
-    PYTHON,
+    DRAGONS,
     SUPPORT_CHAT,
     DEMONS,
     TIGERS,
@@ -22,25 +22,25 @@ THREAD_LOCK = RLock()
 
 
 def is_whitelist_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
-    return any(user_id in user for user in [WOLVES, TIGERS, DEMONS, PYTHON, DEV_USERS])
+    return any(user_id in user for user in [WOLVES, TIGERS, DEMONS, DRAGONS, DEV_USERS])
 
 
 def is_support_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
-    return user_id in DEMONS or user_id in PYTHON or user_id in DEV_USERS
+    return user_id in DEMONS or user_id in DRAGONS or user_id in DEV_USERS
 
 
 def is_sudo_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
-    return user_id in PYTHON or user_id in DEV_USERS
+    return user_id in DRAGONS or user_id in DEV_USERS
 
 
 def is_user_admin(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
     if (
         chat.type == "private"
-        or user_id in PYTHON
+        or user_id in DRAGONS
         or user_id in DEV_USERS
         or chat.all_members_are_administrators
-        or user_id in []
-    ):  # Count telegram and Group Altron as admin
+        or user_id in [777000, 1087968824]
+    ):  # Count telegram and Group Anonymous as admin
         return True
     if not member:
         with THREAD_LOCK:
@@ -77,7 +77,7 @@ def can_delete(chat: Chat, bot_id: int) -> bool:
 def is_user_ban_protected(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
     if (
         chat.type == "private"
-        or user_id in PYTHON
+        or user_id in DRAGONS
         or user_id in DEV_USERS
         or user_id in WOLVES
         or user_id in TIGERS
@@ -363,7 +363,7 @@ def user_can_ban(func):
         member = update.effective_chat.get_member(user)
         if (
             not (member.can_restrict_members or member.status == "creator")
-            and user not in PYTHON
+            and user not in DRAGONS
             and user not in [777000, 1087968824]
         ):
             update.effective_message.reply_text("ðŸ˜¹ Sorry You can't do that")

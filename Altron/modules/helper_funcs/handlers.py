@@ -1,6 +1,6 @@
 import Altron.modules.sql.blacklistusers_sql as sql
 from Altron import ALLOW_EXCL
-from Altron import DEV_USERS, PYTHON, DEMONS, TIGERS, WOLVES
+from Altron import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
 
 from telegram import Update
 from telegram.ext import CommandHandler, MessageHandler, RegexHandler, Filters
@@ -13,16 +13,16 @@ from pyrate_limiter import (
 )
 
 if ALLOW_EXCL:
-    CMD_STARTERS = ("/", "!", ".", "•", "♡", "~", "$", "*", "?", "+", "☆", "#")
+    CMD_STARTERS = ("/", "!", ".", "•", "♡", "~", "$", "*", "?", "+", "☆")
 else:
-    CMD_STARTERS = ("/", "!", ".", "•", "♡", "~", "$", "*", "?", "+", "☆", "#")
+    CMD_STARTERS = ("/", "!", ".", "•", "♡", "~", "$", "*", "?", "+", "☆")
 
 
 class AntiSpam:
     def __init__(self):
         self.whitelist = (
             (DEV_USERS or [])
-            + (PYTHON or [])
+            + (DRAGONS or [])
             + (WOLVES or [])
             + (DEMONS or [])
             + (TIGERS or [])
