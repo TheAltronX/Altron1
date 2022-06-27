@@ -1,4 +1,4 @@
-# © @HACKERX131
+# © @TheAltronX
 import sys
 import traceback
 from functools import wraps

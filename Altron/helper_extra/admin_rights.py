@@ -1,5 +1,3 @@
-import asyncio
-
 from telegram import User, Chat
 
 
