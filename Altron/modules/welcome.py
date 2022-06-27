@@ -11,7 +11,7 @@ from Altron import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
-    PYTHON,
+    DRAGONS,
     DEMONS,
     TIGERS,
     WOLVES,
@@ -207,7 +207,7 @@ def new_member(update: Update, context: CallbackContext):
                 continue
 
             # Welcome Sudos
-            elif new_mem.id in PYTHON:
+            elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
                     "Whoa! A Dragon disaster just joined! Stay Alert!",
                     reply_to_message_id=reply,

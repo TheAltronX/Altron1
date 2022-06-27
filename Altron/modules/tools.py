@@ -1,4 +1,4 @@
-# © @HACKERX131
+# © @TheAltronX
 
 __mod_name__ = "Tᴏᴏʟs"
 

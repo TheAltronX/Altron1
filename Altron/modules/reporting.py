@@ -1,6 +1,6 @@
 import html
 
-from Altron import LOGGER, PYTHON, TIGERS, WOLVES, dispatcher
+from Altron import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
 from Altron.modules.helper_funcs.chat_status import user_admin, user_not_admin
 from Altron.modules.log_channel import loggable
 from Altron.modules.sql import reporting_sql as sql
@@ -17,7 +17,7 @@ from telegram.ext import (
 from telegram.utils.helpers import mention_html
 
 REPORT_GROUP = 12
-REPORT_IMMUNE_USERS = PYTHON + TIGERS + WOLVES
+REPORT_IMMUNE_USERS = DRAGONS + TIGERS + WOLVES
 
 
 @run_async

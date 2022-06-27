@@ -16,7 +16,7 @@ from telegram.utils.helpers import escape_markdown, mention_html
 from Altron import (
     DEV_USERS,
     OWNER_ID,
-    PYTHON,
+    DRAGONS,
     DEMONS,
     TIGERS,
     WOLVES,
@@ -31,7 +31,7 @@ from Altron.modules.sql.afk_sql import is_afk, check_afk_status
 from Altron.modules.sql.users_sql import get_user_num_chats
 from Altron.modules.helper_funcs.chat_status import sudo_plus
 from Altron.modules.helper_funcs.extraction import extract_user
-from Altron import telethn as FallenTelethonClient, TIGERS, PYTHON, DEMONS
+from Altron import telethn as FallenTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
 def no_by_per(totalhp, percentage):
@@ -161,7 +161,7 @@ def get_id(update: Update, context: CallbackContext):
 
 @FallenTelethonClient.on(
     events.NewMessage(
-        pattern="/ginfo ", from_users=(TIGERS or []) + (PYTHON or []) + (DEMONS or [])
+        pattern="/ginfo ", from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])
     )
 )
 async def group_info(event) -> None:
@@ -280,7 +280,7 @@ def info(update: Update, context: CallbackContext):
     elif user.id in DEV_USERS:
         text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴀ ᴍᴇᴍʙᴇʀ ᴏғ <b>ᴀɴᴏɴ ᴀssᴏᴄɪᴀᴛɪᴏɴ</b>.\n"
         disaster_level_present = True
-    elif user.id in PYTHON:
+    elif user.id in DRAGONS:
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ᴅʀᴀɢᴏɴ</b>.\n"
         disaster_level_present = True
     elif user.id in DEMONS:
@@ -294,7 +294,7 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' \n[<a href="https://t.me/Altron_X/96962">ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴋɴᴏᴡ ᴡʜᴀᴛ ɪs ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs.</a>]'.format(
+        text += ' \n[<a href="https://t.me/DevilsHeavenMF/96962">ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴋɴᴏᴡ ᴡʜᴀᴛ ɪs ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs.</a>]'.format(
             bot.username
         )
 
