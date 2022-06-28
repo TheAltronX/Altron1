@@ -1,4 +1,4 @@
-<p align="center"><a href="https://t.me/Shailendra34"><img src="https://te.legra.ph/file/44f3a1cc70e63ecd29b22.jpg"></a></p>
+<p align="center"><a href="https://t.me/Shailendra34"><img src="https://te.legra.ph/file/0957630b8248e79400247.jpg"></a></p>
 
 ━━━━━━━━━━━━━━━━━━━━━━
 <p align="center">
